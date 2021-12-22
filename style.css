@@ -547,6 +547,15 @@ header #menu{
         top:6.4rem;
     }
 
+    .home{
+        background:url(pics/homepic.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        text-align: center;
+    }
+
     .home h1{
         font-size: 4rem;
     }
