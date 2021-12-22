@@ -1,5 +1,5 @@
 :root{
-    --gradient:linear-gradient(90deg, #f1c40f, #f39c12);
+    --gradient:linear-gradient(90deg, #0e00d8, #3251fc);
 }
 
 *{
@@ -31,7 +31,7 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-    background:linear-gradient(#f1c40f, #f39c12);
+    background:linear-gradient(#8cc409, #9fbe12);
 }
 
 section{
@@ -180,7 +180,7 @@ header #menu{
 }
 
 .login-form form .box:focus{
-    border-color: #f39c12;
+    border-color: #2812f3;
 }
 
 .login-form form .box:nth-child(3){
@@ -194,7 +194,7 @@ header #menu{
 }
 
 .login-form form p a{
-    color:#f39c12;
+    color:#2112f3;
 }
 
 .login-form form .btn{
@@ -223,7 +223,7 @@ header #menu{
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    background:url(../images/home-bg.jpg) no-repeat;
+    background:url(pics/homepic.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -233,38 +233,17 @@ header #menu{
 
 .home h1{
     font-size: 6rem;
-    color:#666;
+    color:rgb(0, 0, 0);
 }
 
 .home p{
     font-size: 1.9rem;
-    color:#999;
+    color:rgb(54, 50, 50);
     padding:1rem 0;
     width:70rem;
 }
 
-.home .shape{
-    position: absolute;
-    bottom:-.2rem; left: 0;
-    height:15rem;
-    width:100%;
-    background:url(../images/shape.png);
-    block-size: 100rem 15rem;
-    filter: drop-shadow(0 -.1rem .1rem rgba(0,0,0,.2));
-    animation: animate 10s linear infinite;
-}
 
-@keyframes animate{
-
-    0%{
-        background-position-x: 0rem;
-    }
-
-    100%{
-        background-position-x: 100rem;
-    }
-
-}
 
 .about{
     display: flex;
@@ -375,9 +354,7 @@ header #menu{
 
 .teacher{
     text-align: center;
-    background:url(../images/teachers.jfif) no-repeat;
-    background-size: cover;
-    background-position: bottom;
+
 }
 
 .teacher p{
@@ -426,7 +403,7 @@ header #menu{
 }
 
 .contact .row form .box:focus{
-    border-color: #f39c12;
+    border-color: #4e12f3;
 }
 
 .contact .row form .box::placeholder{
