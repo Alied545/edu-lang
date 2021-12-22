@@ -2,26 +2,19 @@
     --gradient:linear-gradient(90deg, #f1c40f, #f39c12);
 }
 
-
 *{
     font-family: 'Open Sans', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
-    border: none; outline: none;
+    border:none; outline: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: all .0s linear;
+    transition: all .2s linear;
 }
 
 *::selection{
-    background:rgba(255, 255, 0, 0.808);
-    color: white;
-}
-
-section{
-    min-height: 100vh;
-    padding:1rem 7%;
-    padding-top: 6rem;
+    background:#f39c12;
+    color:#fff;
 }
 
 html{
@@ -30,26 +23,32 @@ html{
 }
 
 html::-webkit-scrollbar{
-    width:1.5rem ;
+    width:1.5rem;
 }
 
 html::-webkit-scrollbar-track{
-    background: rgb(8, 8, 8);
+    background:#333;
 }
 
 html::-webkit-scrollbar-thumb{
-    background: linear-gradient( #8b0ff1, #f39c12);
+    background:linear-gradient(#f1c40f, #f39c12);
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem 7%;
+    padding-top:6rem;
 }
 
 .btn{
-    padding: .7rem 3rem;
+    padding:.7rem 3rem;
     font-size: 2rem;
-    color: #fff;
-    background: var(--gradient);
-    border-radius: 5%;
+    color:#fff;
+    background:var(--gradient);
+    border-radius: 5rem;
     margin-top: 1rem;
     cursor: pointer;
-    box-shadow: 0 .1rem .3rem rgba(0,0,0, .3);
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -58,21 +57,22 @@ html::-webkit-scrollbar-thumb{
 .btn::before{
     content: '';
     position: absolute;
-    top: -1rem; left: -100%;
-    background: #fff;
-    width: 20%;
+    top:-1rem; left:-100%;
+    background:#fff9;
+    height:150%;
+    width:20%;
     transform: rotate(25deg);
     z-index: -1;
 }
 
-.btn:hover:before{
-    transition: .5% linear;
+.btn:hover::before{
+    transition: .3s linear;
     left: 120%;
 }
 
 .heading{
-    color: #444;
-    padding: 1rem;
+    color:#444;
+    padding:1rem;
     font-size: 4rem;
     text-align: center;
 }
@@ -83,16 +83,15 @@ header{
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 0; left: 0%;
+    top:0; left: 0;
     z-index: 1000;
-    padding: 1.5rem 7%;
-    background: vare(--gradient);
-    background-color: rgb(138,43,226);
-    box-shadow: 0 .1rem .3rem rgba(0,0,0, .3);
+    padding:1.5rem 7%;
+    background:var(--gradient);
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
 }
 
 header .logo{
-    color: #fff;
+    color:#fff;
     font-size: 2.5rem;
 }
 
@@ -104,32 +103,32 @@ header .navbar ul{
 }
 
 header .navbar ul li{
-    margin: 0 1rem;
+    margin:0 1rem;
 }
 
-header .navbar ul li a{ 
+header .navbar ul li a{
     font-size: 2rem;
-    color: #fff;
+    color:#fff;
 }
 
 header .navbar ul li a.active,
 header .navbar ul li a:hover{
-    color: rgb(156, 210, 30);
+    color:#444;
 }
 
 header #login{
     font-size: 3rem;
-    color: #fff;
+    color:#fff;
     cursor: pointer;
 }
 
 header #login:hover{
-    color: chocolate;
+    color:#444;
 }
 
 header #menu{
     font-size: 3rem;
-    color: #fff;
+    color:#fff;
     cursor: pointer;
     display: none;
 }
@@ -162,7 +161,7 @@ header #menu{
 
 .login-form form h3{
     font-size: 3rem;
-    color: rgb(138,43,226);
+    color:#f39c12;
     padding:1rem 0;
 }
 
@@ -181,7 +180,7 @@ header #menu{
 }
 
 .login-form form .box:focus{
-    border-color: rgb(138,43,226);
+    border-color: #f39c12;
 }
 
 .login-form form .box:nth-child(3){
@@ -195,7 +194,7 @@ header #menu{
 }
 
 .login-form form p a{
-    color: rgb(138,43,226);
+    color:#f39c12;
 }
 
 .login-form form .btn{
@@ -224,7 +223,7 @@ header #menu{
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    background:url(pics/homepic.png) no-repeat;
+    background:url(../images/home-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -232,33 +231,41 @@ header #menu{
     text-align: center;
 }
 
-
-
-
-.btn{
-    border-radius: 2ch;
-}
-
-/*
-.intro01{
-    font-size: 10pt;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-*/
-
 .home h1{
     font-size: 6rem;
-    color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#666;
 }
 
 .home p{
     font-size: 1.9rem;
-    color: black;
-    padding: 1rem 0;
-    width: 70rem;
+    color:#999;
+    padding:1rem 0;
+    width:70rem;
 }
+
+.home .shape{
+    position: absolute;
+    bottom:-.2rem; left: 0;
+    height:15rem;
+    width:100%;
+    background:url(../images/shape.png);
+    block-size: 100rem 15rem;
+    filter: drop-shadow(0 -.1rem .1rem rgba(0,0,0,.2));
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+
+    0%{
+        background-position-x: 0rem;
+    }
+
+    100%{
+        background-position-x: 100rem;
+    }
+
+}
+
 .about{
     display: flex;
     align-items: center;
@@ -267,12 +274,12 @@ header #menu{
 }
 
 .about .image{
-    flex: 1 1 40rem;
+    flex:1 1 40rem;
 }
 
-.about .image{
-    height: 65vh;
-    width: 100%;
+.about .image img{
+    height:65vh;
+    width:100%;
 }
 
 .about .content{
@@ -281,13 +288,13 @@ header #menu{
 
 .about .content h3{
     font-size: 3.5rem;
-    color: #666;
+    color:#666;
 }
 
 .about .content p{
     font-size: 1.5rem;
-    color: #666;
-    padding: 1rem 0;
+    color:#666;
+    padding:1rem 0;
 }
 
 .course .box-container{
@@ -315,7 +322,7 @@ header #menu{
 }
 
 .course .box-container .box .content .stars i{
-    color: #f39c12;
+    color:#f39c12;
     font-size: 1.7rem;
     padding:1rem .1rem;
 }
@@ -350,7 +357,7 @@ header #menu{
 }
 
 .course .box-container .box .content .info h3 i{
-    color:rgb(138,43,226);
+    color:#f39c12;
 }
 
 .course .box-container .box .price{
@@ -366,67 +373,60 @@ header #menu{
     font-size: 3rem;
 }
 
-.container{
-    margin-left: 150px auto;
-    width: 50%;
-    padding: 8px;
+.teacher{
+    text-align: center;
+    background:url(../images/teachers.jfif) no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 
-.container .profile{
-    float: left;
-    padding: 0 60px 0 0;
-}
-
-.container ,text{
-    text-align: justify;
-    font-size: 12pt;
-}
-
-.people p{
+.teacher p{
     font-size: 1.8rem;
-    color: #666;
-    width: 1rem auto;
+    color:#666;
+    width:65rem;
+    margin:1rem auto;
 }
 
 .contact{
-    background: rgb(27, 27, 27);
+    background:#111;
 }
 
 .contact .heading{
-    color: #fff;
+    color:#fff;
 }
 
 .contact .row{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .contact .row form{
-    flex: 1 1 50rem;
-    background: #222;
-    padding: 2rem;
+    flex:1 1 50rem;
+    background:#222;
+    padding:2rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 3rem;
     align-items: flex-start;
 }
+
 .contact .row form .box{
-    height: 5rem;
-    width: 49%;
-    border: .1rem solid #eee;
-    padding: 0 1rem;
-    margin: 1rem 0;
+    height:5rem;
+    width:49%;
+    border:.1rem solid #eee;
+    padding:0 1rem;
+    margin:1rem 0;
     font-size: 1.7rem;
-    color: #fff;
-    background: none;
+    color:#fff;
+    background:none;
     text-transform: none;
 }
 
 .contact .row form .box:focus{
-    border-color: rgb(138,43,226);
+    border-color: #f39c12;
 }
 
 .contact .row form .box::placeholder{
@@ -434,15 +434,15 @@ header #menu{
 }
 
 .contact .row form .address{
-    height: 15rem;
-    padding: 1rem;
+    height:15rem;
+    padding:1rem;
     resize: none;
-    width: 100%;
+    width:100%;
 }
 
 .contact .row form .btn:hover{
-    background: #fff;
-    color: #333;
+    background:#fff;
+    color:#333;
 }
 
 .contact .row .image img{
@@ -514,68 +514,88 @@ header #menu{
 
 
 
-/*media queries*/
+
+
+
+
+
+
+
+
+/* media queries  */
+
 @media (max-width:768px){
+
     html{
         font-size: 55%;
     }
+
     header #menu{
         display: block;
     }
-    
+
     header .navbar{
         position: fixed;
-        top: -120%; left:0;
-        width: 100%;
-        background: #6a0eb6;
+        top:-120%; left:0;
+        width:100%;
+        background:#444;
     }
 
     header .navbar ul{
         flex-flow: column;
         padding:2rem 0;
     }
+
     header .navbar ul li{
         margin:1.5rem 0;
         text-align: center;
-        width: 100%;
+        width:100%;
     }
-    
+
     header .navbar ul li a{
         font-size: 2.5rem;
         display: block;
     }
-    header .navbar ul li a.active,
 
+    header .navbar ul li a.active,
     header .navbar ul li a:hover{
-        color: yellow;
+        color:#f39c12;
     }
 
     .fa-times{
         transform: rotate(180deg);
     }
-    
+
     header .navbar.nav-toggle{
-        top: 6.4rem;
+        top:6.4rem;
     }
 
     .home h1{
         font-size: 4rem;
-        
     }
 
     .home p{
         width: auto;
-
-    }
-    .people p{
-        width: auto;
     }
 
+    .teacher p{
+        width:auto;
+    }
+
+    .contact .row .image{
+        display: none;
+    }
 
 }
 
 @media (max-width:500px){
+
     html{
         font-size: 50%;
     }
+
+    .contact .row form .box{
+        width:100%;
+    }
+
 }
