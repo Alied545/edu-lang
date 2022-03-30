@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Course</title>
+
+    <!--Custom Css File Link-->
+    <link rel="stylesheet" href="english.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <meta name="HandheldFriendly" content="true">
+
+
+    <style>
+        .button {
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+        }
+        
+        .button1 {
+          background-color: white;
+          color: black;
+          border: 2px solid #4CAF50;
+        }
+        
+        .button1:hover {
+          background-color: #4CAF50;
+          color: white;
+        }
+        
+        .button2 {
+          background-color: white;
+          color: black;
+          border: 2px solid #008CBA;
+        }
+        
+        .button2:hover {
+          background-color: #008CBA;
+          color: white;
+        }
+        
+        </style>
+</head>
+<body>
+
+    <h3 class="heading">Speak Now!</h3>
+
+    <div class="container">
+
+        <div class="main-video">
+
+            <div class="video">
+                <video src="english course/Lesson One (Compressed).m4v" 
+                   controls muted autoplay></video>
+                <h3 class="title">01. Lesson One</h3>
+            </div>
+
+        </div>
+
+        <div class="video-list">
+            <div class="vid active">
+                <video src="english course/Lesson One (Compressed).m4v" 
+                 muted></video>
+                <h3 class="title">01. Lesson One</h3>
+            </div>
+            <div class="vid">
+                <video src="english course/Lesson 2 (compressed).m4v" 
+                 muted></video>
+                <h3 class="title">02. Lesson Two</h3>
+            </div>
+            <div class="vid">
+                <video src="Lesson One (Compressed).m4v" 
+                 muted></video>
+                <h3 class="title">03. Lesson Three</h3>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script>
+
+    let listVideo = document.querySelectorAll('.video-list .vid');
+    let mainVideo = document.querySelector('.main-video video');
+    let title = document.querySelector('.main-video .title');
+
+    listVideo.forEach(video =>{
+        video.onclick = () =>{
+            listVideo.forEach(vid => vid.classList.remove('active'));
+            video.classList.add('active');
+            if(video.classList.contains('active')){
+                let src = video.children[0].getAttribute('src');
+                mainVideo.src = src;
+                let text = video.children[1].innerHTML;
+                title.innerHTML = text;
+            };
+ 
+        };
+    });
+
+    </script>
+        
+       <a href="index.html"> <button class="button button1">Home</button></a>
+</body>
+</html>
